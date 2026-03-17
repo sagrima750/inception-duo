@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Devcation Delhi 2026 — Where Speed, Skill, and Code Converge</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@300;400;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<style>
+:root{
+  --void:#0a0000;
+  --coal:#110000;
+  --deep:#180000;
+  --slab:#220505;
+  --panel:rgba(15,0,0,0.92);
+  --glass:rgba(200,20,20,0.06);
+  --b1:rgba(200,30,30,0.16);
+  --b2:rgba(220,40,30,0.38);
+  --b3:rgba(240,50,30,0.62);
+  --red:#cc1a0e;
+  --red2:#e02a18;
+  --red3:#ff4433;
+  --dim:#6b2828;
+  --muted:#8a3a3a;
+  --text:#d4a8a8;
+  --cream:#f0dada;
+  --bright:#fff0f0;
+  --gfire:linear-gradient(135deg,#cc1a0e,#ff4433);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--void);color:var(--text);font-family:'Barlow Condensed',sans-serif;overflow-x:hidden;cursor:none;}
+
+/* GRAIN */
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='250'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='250' height='250' filter='url(%23n)' opacity='0.042'/%3E%3C/svg%3E");pointer-events:none;z-index:9990;}
+/* GRID */
+body::after{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(200,20,20,0.028) 1px,transparent 1px),linear-gradient(90deg,rgba(200,20,20,0.028) 1px,transparent 1px);background-size:44px 44px;pointer-events:none;z-index:0;}
+
+/* CURSOR */
+#cursor{position:fixed;width:7px;height:7px;background:var(--red2);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .18s,height .18s;}
+#cursor-ring{position:fixed;width:30px;height:30px;border:1px solid rgba(204,26,14,0.55);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:all 0.16s ease;}
+#cursor-ring.big{width:48px;height:48px;border-color:rgba(204,26,14,0.85);}
+
+/* PARTICLES */
+#bgcanvas{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none;}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;padding:0.9rem 5%;background:rgba(10,0,0,0.8);backdrop-filter:blur(20px);border-bottom:1px solid var(--b1);transition:all 0.3s;}
+nav.scrolled{background:rgba(10,0,0,0.97);border-bottom-color:var(--b2);}
+nav::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent 5%,var(--red) 45%,var(--red2) 55%,transparent 95%);opacity:0.35;}
+.nav-logo{font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:0.15em;color:var(--bright);text-decoration:none;display:flex;align-items:center;gap:0.65rem;}
+.logo-deer-sm{width:26px;height:26px;}
+.nav-links{display:flex;align-items:center;gap:2.2rem;list-style:none;}
+.nav-links a{color:var(--dim);text-decoration:none;font-family:'Share Tech Mono',monospace;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;transition:color 0.22s;position:relative;}
+.nav-links a::after{content:'';position:absolute;bottom:-3px;left:0;right:0;height:1px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform 0.22s;}
+.nav-links a:hover{color:var(--red3);}
+.nav-links a:hover::after{transform:scaleX(1);}
+.nav-register{font-family:'Bebas Neue',sans-serif;font-size:0.88rem;letter-spacing:0.15em;color:var(--bright);background:var(--red);padding:0.55rem 1.6rem;text-decoration:none;clip-path:polygon(7px 0%,100% 0%,calc(100% - 7px) 100%,0% 100%);transition:background 0.25s;position:relative;overflow:hidden;}
+.nav-register::before{content:'';position:absolute;inset:0;background:rgba(255,255,255,0.12);transform:translateX(-100%);transition:transform 0.3s;}
+.nav-register:hover::before{transform:translateX(100%);}
+.nav-register:hover{background:var(--red2);}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;}
+.hamburger span{display:block;width:22px;height:1.5px;background:var(--text);transition:all 0.3s;}
+
+/* ── HERO ── */
+#hero{position:relative;min-height:100vh;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:10rem 8% 5rem;overflow:hidden;}
+.hero-sky{position:absolute;inset:0;background:radial-gradient(ellipse 100% 65% at 50% -5%,rgba(120,10,10,0.85) 0%,rgba(10,0,0,0.95) 60%,var(--void) 100%);}
+.hero-fog{position:absolute;bottom:0;left:0;right:0;height:32%;background:linear-gradient(to top,rgba(10,0,0,0.98),transparent);z-index:2;pointer-events:none;}
+
+.hero-cityscape{position:absolute;bottom:0;left:0;right:0;width:100%;height:82vh;z-index:1;pointer-events:none;}
+
+.hero-scan{position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 4px,rgba(204,26,14,0.009) 4px,rgba(204,26,14,0.009) 5px);pointer-events:none;z-index:3;}
+
+.hl{position:absolute;height:1px;pointer-events:none;z-index:4;}
+.hl1{width:50%;left:25%;top:54%;background:linear-gradient(90deg,transparent,rgba(204,26,14,0.55),transparent);animation:lp 5.5s ease-in-out infinite;}
+.hl2{width:28%;left:44%;top:72%;background:linear-gradient(90deg,transparent,rgba(180,20,10,0.35),transparent);animation:lp 8s ease-in-out infinite 3s;}
+@keyframes lp{0%,100%{opacity:0;transform:scaleX(0.2);}50%{opacity:1;transform:scaleX(1);}}
+
+.hc{position:absolute;width:44px;height:44px;border-color:rgba(204,26,14,0.42);border-style:solid;z-index:5;}
+.hc.tl{top:6rem;left:6%;border-width:1px 0 0 1px;}
+.hc.tr{top:6rem;right:6%;border-width:1px 1px 0 0;}
+.hc.bl{bottom:4.5rem;left:6%;border-width:0 0 1px 1px;}
+.hc.br{bottom:4.5rem;right:6%;border-width:0 1px 1px 0;}
+
+/* HERO CONTENT */
+.hero-content{position:relative;z-index:5;}
+.hero-eyebrow{font-family:'Share Tech Mono',monospace;font-size:0.65rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--red3);margin-bottom:1.1rem;opacity:0;animation:fadeup .8s .3s ease forwards;}
+.hero-eyebrow::before{content:'// ';color:rgba(204,26,14,0.55);}
+h1.hero-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(4rem,11vw,9rem);font-weight:400;line-height:.92;letter-spacing:.03em;opacity:0;animation:fadeup .85s .5s ease forwards;}
+.hero-title .l1{display:block;color:var(--bright);}
+.hero-title .l2{display:block;color:var(--red2);}
+.hero-title .l3{display:block;font-family:'Share Tech Mono',monospace;font-size:.19em;letter-spacing:.3em;color:var(--muted);font-weight:400;margin-top:.6em;text-transform:uppercase;}
+.hero-tagline{font-family:'Barlow Condensed',sans-serif;font-size:1.05rem;font-weight:400;letter-spacing:.05em;color:var(--muted);margin:1.6rem 0 2.5rem;max-width:490px;line-height:1.7;border-left:2px solid var(--red);padding-left:1rem;opacity:0;animation:fadeup .8s .75s ease forwards;}
+.hero-meta{display:flex;gap:2rem;flex-wrap:wrap;margin-bottom:2.5rem;opacity:0;animation:fadeup .8s .95s ease forwards;}
+.hero-meta-item{font-family:'Share Tech Mono',monospace;font-size:0.7rem;letter-spacing:.06em;color:var(--muted);display:flex;align-items:center;gap:.4rem;}
+.hero-meta-item strong{color:var(--red3);font-weight:400;}
+.hero-actions{display:flex;gap:1.1rem;flex-wrap:wrap;opacity:0;animation:fadeup .8s 1.15s ease forwards;}
+@keyframes fadeup{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
+
+.btn{font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;padding:.85rem 2.3rem;display:inline-block;transition:all .28s;clip-path:polygon(10px 0%,100% 0%,calc(100% - 10px) 100%,0% 100%);position:relative;overflow:hidden;}
+.btn-primary{background:var(--red);color:var(--bright);}
+.btn-primary::before{content:'';position:absolute;inset:0;background:rgba(255,255,255,0.1);transform:translateX(-100%);transition:transform .3s;}
+.btn-primary:hover::before{transform:translateX(100%);}
+.btn-primary:hover{background:var(--red2);transform:translateY(-2px);}
+.btn-outline{background:transparent;color:var(--cream);border:1px solid var(--b2);}
+.btn-outline:hover{border-color:var(--b3);background:rgba(204,26,14,0.08);transform:translateY(-2px);}
+
+.hero-scroll{position:absolute;bottom:4.5rem;right:8%;display:flex;flex-direction:column;align-items:center;gap:.5rem;z-index:5;opacity:0;animation:fadeup 1s 1.9s ease forwards;}
+.hero-scroll span{font-family:'Share Tech Mono',monospace;font-size:.55rem;letter-spacing:.22em;color:rgba(107,40,40,0.6);}
+.sb{width:1px;height:38px;background:linear-gradient(to bottom,var(--red),transparent);animation:sp 2s ease-in-out infinite;}
+@keyframes sp{0%,100%{opacity:1;transform:scaleY(1);}50%{opacity:.3;transform:scaleY(.4);}}
+
+.ticker{position:absolute;bottom:0;left:0;right:0;background:rgba(100,10,10,0.2);border-top:1px solid var(--b2);padding:.6rem 0;overflow:hidden;z-index:5;}
+.ticker-inner{display:flex;gap:5rem;white-space:nowrap;animation:tick 24s linear infinite;font-family:'Share Tech Mono',monospace;font-size:.6rem;letter-spacing:.13em;color:rgba(204,26,14,.6);}
+@keyframes tick{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+.tsep{color:rgba(100,10,10,.5);}
+
+/* ── SECTIONS ── */
+section{position:relative;z-index:1;padding:6.5rem 8%;}
+.s-eye{font-family:'Share Tech Mono',monospace;font-size:.62rem;letter-spacing:.26em;text-transform:uppercase;color:var(--red);margin-bottom:.5rem;display:flex;align-items:center;gap:.6rem;}
+.s-eye::before{content:'//';color:rgba(204,26,14,0.45);margin-right:.2rem;}
+.s-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,4.5vw,4rem);font-weight:400;line-height:1.05;letter-spacing:.08em;color:var(--bright);margin-bottom:.8rem;}
+.s-sub{font-size:1rem;font-weight:300;color:var(--muted);line-height:1.75;max-width:560px;}
+.s-divider{width:80px;height:1px;background:linear-gradient(90deg,var(--red),transparent);margin:.7rem 0 2.5rem;opacity:.6;}
+
+/* ABOUT */
+#about{background:linear-gradient(180deg,transparent,rgba(30,0,0,0.15),transparent);}
+.about-grid{display:grid;grid-template-columns:1fr 1.35fr;gap:5rem;align-items:start;margin-top:3rem;}
+.about-stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--b1);border:1px solid var(--b1);}
+.about-stat{background:var(--coal);padding:1.5rem 1.25rem;text-align:center;transition:background .3s;position:relative;}
+.about-stat::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--gfire);transform:scaleX(0);transition:transform .35s;transform-origin:left;}
+.about-stat:hover{background:rgba(100,10,10,0.2);}
+.about-stat:hover::before{transform:scaleX(1);}
+.stat-num{font-family:'Bebas Neue',sans-serif;font-size:2.2rem;color:var(--red2);line-height:1;}
+.stat-lbl{font-family:'Share Tech Mono',monospace;font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;color:var(--dim);margin-top:.3rem;}
+.about-text p{color:var(--muted);line-height:1.8;margin-bottom:1rem;font-size:.96rem;}
+.about-text strong{color:var(--cream);}
+.org-badges{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1.5rem;}
+.org-badge{display:flex;align-items:center;gap:.45rem;border:1px solid var(--b1);background:var(--glass);padding:.4rem .8rem;font-family:'Share Tech Mono',monospace;font-size:.62rem;color:var(--text);}
+.org-dot{width:4px;height:4px;border-radius:50%;flex-shrink:0;}
+
+/* TRACKS */
+.tracks-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:1px;margin-top:3rem;background:var(--b1);border:1px solid var(--b1);}
+.track-card{background:var(--coal);padding:2.5rem 2rem;position:relative;overflow:hidden;transition:background .35s;cursor:pointer;}
+.track-card::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--gfire);transform:scaleX(0);transform-origin:left;transition:transform .4s ease;}
+.track-card:hover{background:rgba(25,0,0,0.95);}
+.track-card:hover::after{transform:scaleX(1);}
+.track-num{font-family:'Share Tech Mono',monospace;font-size:.58rem;letter-spacing:.2em;color:rgba(204,26,14,.5);margin-bottom:1.5rem;}
+.track-icon{width:48px;height:48px;border:1px solid var(--b1);display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:1.2rem;background:rgba(255,255,255,.018);transition:border-color .3s;position:relative;z-index:1;}
+.track-card:hover .track-icon{border-color:var(--b2);}
+.track-title{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:.08em;color:var(--bright);margin-bottom:.2rem;position:relative;z-index:1;}
+.track-sub{font-family:'Share Tech Mono',monospace;font-size:.6rem;letter-spacing:.1em;color:var(--red3);opacity:.75;margin-bottom:1rem;position:relative;z-index:1;}
+.track-desc{font-size:.9rem;color:var(--muted);line-height:1.75;margin-bottom:1.5rem;font-weight:300;position:relative;z-index:1;}
+.track-desc strong{color:var(--cream);}
+.track-tags{display:flex;flex-wrap:wrap;gap:.4rem;position:relative;z-index:1;}
+.ttag{font-family:'Share Tech Mono',monospace;font-size:.55rem;letter-spacing:.06em;padding:.2rem .55rem;border:1px solid var(--b1);color:var(--dim);transition:all .2s;}
+.track-card:hover .ttag{border-color:var(--b2);color:var(--text);}
+.track-badge{position:absolute;top:1rem;right:1rem;font-family:'Share Tech Mono',monospace;font-size:.52rem;letter-spacing:.1em;padding:.2rem .6rem;background:rgba(204,26,14,.1);border:1px solid rgba(204,26,14,.35);color:var(--red3);}
+
+/* TIMELINE */
+#timeline{background:linear-gradient(180deg,transparent,rgba(30,0,0,0.1),transparent);}
+.tl-wrap{max-width:800px;margin:3.5rem auto 0;position:relative;}
+.tl-line{position:absolute;left:50%;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,transparent,var(--b2) 12%,var(--b2) 88%,transparent);transform:translateX(-50%);}
+.tl-item{display:grid;grid-template-columns:1fr 28px 1fr;gap:2rem;align-items:center;margin-bottom:3rem;}
+.tl-card{background:var(--coal);border:1px solid var(--b1);padding:1.4rem 1.5rem;transition:border-color .3s;position:relative;}
+.tl-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,var(--red),transparent);opacity:0;transition:opacity .3s;}
+.tl-card:hover{border-color:var(--b2);}
+.tl-card:hover::before{opacity:.6;}
+.tl-date{font-family:'Share Tech Mono',monospace;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--red3);opacity:.75;margin-bottom:.4rem;}
+.tl-event{font-family:'Bebas Neue',sans-serif;font-size:1.1rem;letter-spacing:.06em;color:var(--bright);}
+.tl-detail{font-size:.82rem;color:var(--muted);margin-top:.3rem;line-height:1.7;font-weight:300;}
+.tl-dot{width:12px;height:12px;background:var(--void);border:1px solid var(--red);transform:rotate(45deg);flex-shrink:0;position:relative;z-index:1;margin:0 auto;}
+.tl-dot.special{border-color:var(--red3);background:rgba(204,26,14,0.12);}
+
+/* PRIZES */
+.prizes-podium{display:grid;grid-template-columns:1fr 1.25fr 1fr;gap:1.5rem;margin-top:3.5rem;align-items:end;}
+.prize-card{background:var(--coal);border:1px solid var(--b1);text-align:center;padding:2rem 1.25rem;position:relative;overflow:hidden;transition:border-color .35s,transform .35s;}
+.prize-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--gfire);transform:scaleX(0);transition:transform .4s;}
+.prize-card:hover{transform:translateY(-5px);border-color:var(--b2);}
+.prize-card:hover::after{transform:scaleX(1);}
+.prize-card.first{border-color:rgba(204,26,14,.35);padding:2.8rem 1.25rem;background:linear-gradient(180deg,rgba(204,26,14,.07) 0%,var(--coal) 100%);}
+.prize-medal{font-size:2.2rem;display:block;margin-bottom:.9rem;}
+.prize-place{font-family:'Share Tech Mono',monospace;font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:var(--dim);margin-bottom:.4rem;}
+.prize-amt{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;letter-spacing:.04em;color:var(--red2);line-height:1;margin-bottom:.5rem;}
+.prize-card.first .prize-amt{font-size:2.4rem;color:var(--red3);}
+.prize-extras{font-size:.8rem;color:var(--dim);line-height:1.65;font-weight:300;}
+.perks-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;margin-top:2rem;background:var(--b1);}
+.perk{display:flex;align-items:center;gap:.75rem;padding:.9rem 1rem;background:var(--coal);font-size:.85rem;font-weight:300;color:var(--dim);transition:background .25s,color .25s;}
+.perk:hover{background:rgba(100,10,10,0.18);color:var(--text);}
+.perk-icon{font-size:1rem;flex-shrink:0;}
+
+/* SPONSORS */
+#sponsors{background:linear-gradient(180deg,transparent,rgba(30,0,0,0.1),transparent);}
+.s-tier{margin-bottom:2.5rem;}
+.tier-lbl{font-family:'Share Tech Mono',monospace;font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;color:var(--dim);margin-bottom:1.2rem;padding-bottom:.5rem;border-bottom:1px solid var(--b1);}
+.tier-lbl::before{content:'[ ';color:var(--red);opacity:.6;}
+.tier-lbl::after{content:' ]';color:var(--red);opacity:.6;}
+.tier-row{display:flex;gap:1px;flex-wrap:wrap;background:var(--b1);}
+.s-card{background:var(--coal);padding:1.2rem 2rem;font-family:'Bebas Neue',sans-serif;font-size:.9rem;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);transition:all .25s;flex:1;min-width:150px;text-align:center;cursor:default;}
+.s-card:hover{background:rgba(100,10,10,0.18);color:var(--text);}
+.s-card.title-sp{font-size:1.2rem;color:var(--red3);background:rgba(204,26,14,.06);}
+.s-card.title-sp:hover{background:rgba(204,26,14,.12);}
+
+/* FAQ */
+.faq-list{max-width:760px;margin:3rem auto 0;}
+.faq-item{border:1px solid var(--b1);margin-bottom:-1px;}
+.faq-item.open{border-color:var(--b2);z-index:1;position:relative;}
+.faq-q{width:100%;background:var(--coal);border:none;color:var(--text);font-family:'Barlow Condensed',sans-serif;font-size:.96rem;font-weight:600;letter-spacing:.04em;padding:1.2rem 1.5rem;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;transition:color .2s,background .2s;}
+.faq-q:hover{color:var(--cream);background:rgba(100,10,10,0.1);}
+.faq-item.open .faq-q{color:var(--red2);background:rgba(100,10,10,0.13);}
+.faq-ch{font-family:'Share Tech Mono',monospace;font-size:.7rem;color:var(--dim);transition:transform .3s;flex-shrink:0;}
+.faq-item.open .faq-ch{transform:rotate(180deg);color:var(--red2);}
+.faq-ans{max-height:0;overflow:hidden;transition:max-height .38s ease;background:rgba(100,10,10,0.04);}
+.faq-ans-inner{padding:0 1.5rem 1.25rem;font-size:.88rem;font-weight:300;line-height:1.82;color:var(--dim);}
+
+/* COMMUNITY */
+.community-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;margin-top:3rem;background:var(--b1);}
+.community-card{background:var(--coal);padding:2rem 1.5rem;text-align:center;text-decoration:none;display:block;transition:all .35s;position:relative;overflow:hidden;}
+.community-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:var(--red);transform:scaleX(0);transition:transform .35s;}
+.community-card:hover{background:rgba(25,0,0,.9);transform:translateY(-3px);}
+.community-card:hover::after{transform:scaleX(1);}
+.cc-icon{font-size:1.7rem;margin-bottom:.9rem;display:block;}
+.cc-name{font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:.1em;text-transform:uppercase;color:var(--bright);}
+.cc-handle{font-family:'Share Tech Mono',monospace;font-size:.6rem;letter-spacing:.06em;color:var(--red3);opacity:.8;margin-top:.2rem;}
+
+/* DEVBOT */
+#devbot-toggle{position:fixed;bottom:2rem;right:2rem;z-index:500;width:52px;height:52px;background:var(--red);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.2rem;clip-path:polygon(6px 0%,100% 0%,calc(100% - 6px) 100%,0% 100%);transition:background .25s,transform .2s;}
+#devbot-toggle:hover{background:var(--red2);transform:scale(1.05);}
+#devbot-panel{position:fixed;bottom:5.5rem;right:2rem;z-index:499;width:340px;background:rgba(10,0,0,0.97);border:1px solid var(--b2);backdrop-filter:blur(20px);display:none;flex-direction:column;box-shadow:0 20px 50px rgba(0,0,0,0.75);}
+#devbot-panel::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--red),var(--red3),transparent);}
+#devbot-panel.open{display:flex;animation:panIn .3s ease;}
+@keyframes panIn{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
+.db-hdr{padding:1rem 1.25rem;border-bottom:1px solid var(--b1);display:flex;align-items:center;gap:.75rem;background:rgba(100,10,10,0.12);}
+.db-av{width:30px;height:30px;background:var(--red);display:flex;align-items:center;justify-content:center;font-size:.85rem;flex-shrink:0;}
+.db-name{font-family:'Bebas Neue',sans-serif;font-size:.82rem;letter-spacing:.1em;color:var(--bright);}
+.db-status{font-family:'Share Tech Mono',monospace;font-size:.58rem;color:var(--red3);display:flex;align-items:center;gap:3px;}
+.db-status::before{content:'';width:4px;height:4px;background:var(--red3);border-radius:50%;animation:blink 2s infinite;}
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:.3;}}
+.db-msgs{flex:1;overflow-y:auto;padding:1rem;display:flex;flex-direction:column;gap:.75rem;min-height:220px;max-height:300px;}
+.db-msgs::-webkit-scrollbar{width:2px;}
+.db-msgs::-webkit-scrollbar-thumb{background:var(--b1);}
+.db-msg{display:flex;gap:.5rem;align-items:flex-start;animation:fadeup .3s ease;}
+.db-msg.u{flex-direction:row-reverse;}
+.db-msg-av{width:22px;height:22px;background:var(--red);display:flex;align-items:center;justify-content:center;font-size:.6rem;flex-shrink:0;}
+.db-msg.u .db-msg-av{background:rgba(255,255,255,.06);border:1px solid var(--b1);}
+.db-bub{background:rgba(255,255,255,.025);border:1px solid var(--b1);padding:.55rem .875rem;font-size:.78rem;line-height:1.65;max-width:78%;color:var(--text);font-weight:300;}
+.db-msg.u .db-bub{background:rgba(100,10,10,.15);border-color:var(--b2);}
+.db-chips{display:flex;flex-wrap:wrap;gap:.4rem;padding:0 1rem .75rem;}
+.db-chip{font-family:'Share Tech Mono',monospace;font-size:.6rem;letter-spacing:.05em;padding:.25rem .65rem;border:1px solid var(--b1);background:none;color:var(--dim);cursor:pointer;transition:all .2s;}
+.db-chip:hover{border-color:var(--b2);color:var(--text);}
+.db-input-row{border-top:1px solid var(--b1);padding:.75rem;display:flex;gap:.5rem;}
+.db-in{flex:1;background:rgba(255,255,255,.025);border:1px solid var(--b1);color:var(--text);font-family:'Barlow Condensed',sans-serif;font-size:.9rem;padding:.45rem .875rem;outline:none;transition:border-color .2s;font-weight:300;}
+.db-in:focus{border-color:var(--b2);}
+.db-in::placeholder{color:var(--dim);}
+.db-snd{width:34px;height:34px;background:var(--red);border:none;cursor:pointer;color:var(--bright);font-size:.85rem;display:flex;align-items:center;justify-content:center;clip-path:polygon(4px 0%,100% 0%,calc(100% - 4px) 100%,0% 100%);transition:background .2s;}
+.db-snd:hover{background:var(--red2);}
+
+/* FOOTER */
+footer{border-top:1px solid var(--b1);padding:2.8rem 8%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.5rem;position:relative;z-index:1;}
+footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--red),transparent);opacity:.25;}
+.footer-logo{font-family:'Bebas Neue',sans-serif;font-size:.95rem;letter-spacing:.14em;color:var(--bright);}
+.footer-tag{font-family:'Share Tech Mono',monospace;font-size:.58rem;color:var(--dim);margin-top:.25rem;letter-spacing:.07em;}
+footer p{font-family:'Share Tech Mono',monospace;font-size:.6rem;color:var(--dim);}
+.footer-links{display:flex;gap:1.5rem;}
+.footer-links a{font-family:'Share Tech Mono',monospace;font-size:.6rem;letter-spacing:.1em;color:var(--dim);text-decoration:none;transition:color .2s;text-transform:uppercase;}
+.footer-links a:hover{color:var(--red3);}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease;}
+.reveal-l{opacity:0;transform:translateX(-36px);transition:opacity .7s ease,transform .7s ease;}
+.reveal-r{opacity:0;transform:translateX(36px);transition:opacity .7s ease,transform .7s ease;}
+.reveal.visible,.reveal-l.visible,.reveal-r.visible{opacity:1;transform:translate(0);}
+.d1{transition-delay:.1s;}.d2{transition-delay:.2s;}.d3{transition-delay:.3s;}.d4{transition-delay:.4s;}
+
+/* MOBILE NAV */
+.mobile-nav{display:none;position:fixed;top:60px;left:0;right:0;background:rgba(10,0,0,0.98);backdrop-filter:blur(20px);border-bottom:1px solid var(--b2);z-index:999;flex-direction:column;padding:1.5rem 8%;gap:1.25rem;}
+.mobile-nav.open{display:flex;}
+.mobile-nav a{font-family:'Bebas Neue',sans-serif;font-size:1.1rem;letter-spacing:.12em;color:var(--dim);text-decoration:none;text-transform:uppercase;transition:color .2s;}
+.mobile-nav a:hover{color:var(--red3);}
+
+@media(max-width:900px){
+  .about-grid{grid-template-columns:1fr;gap:3rem;}
+  .prizes-podium{grid-template-columns:1fr;}
+  .prize-card.first{order:-1;}
+  .tl-line{left:14px;}
+  .tl-item{grid-template-columns:28px 1fr;}
+  .tl-empty{display:none!important;}
+  .tl-center{grid-column:1;}
+  .tl-card{grid-column:2;}
+  .nav-links{display:none;}
+  .hamburger{display:flex;}
+  #hero{align-items:center;text-align:center;padding:8rem 5% 5rem;}
+  .hero-tagline{border-left:none;border-top:2px solid var(--red);padding-left:0;padding-top:.75rem;}
+  .hero-meta{justify-content:center;}
+  .hero-actions{justify-content:center;}
+  h1.hero-title{text-align:center;}
+}
+@media(max-width:600px){section{padding:5rem 5%;}#devbot-panel{width:calc(100vw - 2rem);right:1rem;}#devbot-toggle{right:1rem;bottom:1rem;}}
+</style>
+</head>
+<body>
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+<canvas id="bgcanvas"></canvas>
+
+<!-- NAV -->
+<nav id="main-nav">
+  <a href="#hero" class="nav-logo">
+    <!-- DEER LOGO SMALL -->
+    <svg class="logo-deer-sm" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" fill="none">
+      <g fill="#cc1a0e" opacity="0.9">
+        <!-- antler left -->
+        <path d="M14 18 L10 8 L7 4 M10 8 L6 10 M10 8 L12 5"/>
+        <!-- antler right -->
+        <path d="M26 18 L30 8 L33 4 M30 8 L34 10 M30 8 L28 5"/>
+        <!-- head -->
+        <ellipse cx="20" cy="20" rx="6" ry="5" fill="#cc1a0e"/>
+        <!-- ears -->
+        <ellipse cx="13" cy="18" rx="3" ry="2" fill="#cc1a0e" transform="rotate(-20,13,18)"/>
+        <ellipse cx="27" cy="18" rx="3" ry="2" fill="#cc1a0e" transform="rotate(20,27,18)"/>
+        <!-- neck + body -->
+        <path d="M17 25 L15 36 L20 34 L25 36 L23 25 Z" fill="#cc1a0e"/>
+        <!-- legs -->
+        <line x1="17" y1="34" x2="15" y2="40" stroke="#cc1a0e" stroke-width="1.8"/>
+        <line x1="23" y1="34" x2="25" y2="40" stroke="#cc1a0e" stroke-width="1.8"/>
+        <!-- nose -->
+        <circle cx="20" cy="22" r="1.2" fill="#ff4433"/>
+        <!-- eyes -->
+        <circle cx="17" cy="19" r="1" fill="#0a0000"/>
+        <circle cx="23" cy="19" r="1" fill="#0a0000"/>
+      </g>
+      <!-- antler strokes -->
+      <path d="M14 18 L10 8 L7 4 M10 8 L6 10 M10 8 L12 5" stroke="#cc1a0e" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+      <path d="M26 18 L30 8 L33 4 M30 8 L34 10 M30 8 L28 5" stroke="#cc1a0e" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+    </svg>
+    DEVCATION
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#tracks">Tracks</a></li>
+    <li><a href="#timeline">Timeline</a></li>
+    <li><a href="#prizes">Prizes</a></li>
+    <li><a href="#sponsors">Sponsors</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#community">Community</a></li>
+  </ul>
+  <a href="https://unstop.com" target="_blank" class="nav-register">Register Now</a>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+</nav>
+<div class="mobile-nav" id="mobile-nav">
+  <a href="#about" onclick="closeMobileMenu()">About</a>
+  <a href="#tracks" onclick="closeMobileMenu()">Tracks</a>
+  <a href="#timeline" onclick="closeMobileMenu()">Timeline</a>
+  <a href="#prizes" onclick="closeMobileMenu()">Prizes</a>
+  <a href="#sponsors" onclick="closeMobileMenu()">Sponsors</a>
+  <a href="#faq" onclick="closeMobileMenu()">FAQ</a>
+  <a href="#community" onclick="closeMobileMenu()">Community</a>
+  <a href="https://unstop.com" target="_blank" class="nav-register" style="text-align:center;display:block;margin-top:.5rem;">Register Now</a>
+</div>
+
+<!-- ══════════════ HERO ══════════════ -->
+<section id="hero">
+  <div class="hero-sky"></div>
+  <div class="hero-scan"></div>
+  <div class="hl hl1"></div><div class="hl hl2"></div>
+  <div class="hc tl"></div><div class="hc tr"></div>
+  <div class="hc bl"></div><div class="hc br"></div>
+
+  <!-- ═══ MONUMENT + DEER CITYSCAPE SVG ═══ -->
+  <svg class="hero-cityscape" viewBox="0 0 1440 620" preserveAspectRatio="xMidYMax meet" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="skyG" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#3a0000" stop-opacity="0"/>
+        <stop offset="60%" stop-color="#1a0000" stop-opacity="0.4"/>
+        <stop offset="100%" stop-color="#0a0000" stop-opacity="1"/>
+      </linearGradient>
+      <linearGradient id="wallG" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#3a1010"/>
+        <stop offset="100%" stop-color="#150606"/>
+      </linearGradient>
+      <linearGradient id="domeG" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#2a0c0c"/>
+        <stop offset="100%" stop-color="#0f0404"/>
+      </linearGradient>
+      <linearGradient id="deerGlow" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#cc1a0e" stop-opacity="0.9"/>
+        <stop offset="100%" stop-color="#cc1a0e" stop-opacity="0.15"/>
+      </linearGradient>
+      <radialGradient id="deerHalo" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="#cc1a0e" stop-opacity="0.22"/>
+        <stop offset="100%" stop-color="#cc1a0e" stop-opacity="0"/>
+      </radialGradient>
+      <pattern id="bricks" x="0" y="0" width="18" height="9" patternUnits="userSpaceOnUse">
+        <rect x="0" y="0" width="7.5" height="4" fill="rgba(120,30,30,0.4)" rx=".5"/>
+        <rect x="9.5" y="0" width="7.5" height="4" fill="rgba(120,30,30,0.38)" rx=".5"/>
+        <rect x="4.5" y="5" width="8" height="4" fill="rgba(120,30,30,0.35)" rx=".5"/>
+      </pattern>
+      <filter id="gR"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+      <filter id="softGlow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+      <filter id="deerFilter"><feGaussianBlur stdDeviation="1.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    </defs>
+
+    <rect width="1440" height="620" fill="url(#skyG)"/>
+
+    <!-- FAR BG BUILDINGS -->
+    <g opacity="0.18" fill="#1a0505">
+      <rect x="50" y="380" width="28" height="28"/><rect x="95" y="355" width="18" height="53"/>
+      <rect x="135" y="365" width="32" height="43"/><rect x="185" y="345" width="22" height="63"/>
+      <rect x="225" y="360" width="38" height="48"/><rect x="285" y="350" width="18" height="58"/>
+      <rect x="1100" y="365" width="28" height="43"/><rect x="1148" y="350" width="22" height="58"/>
+      <rect x="1188" y="355" width="38" height="53"/><rect x="1248" y="345" width="18" height="63"/>
+      <rect x="1278" y="365" width="32" height="43"/><rect x="1338" y="355" width="28" height="53"/>
+      <rect x="1388" y="375" width="52" height="33"/>
+    </g>
+
+    <!-- ══ INDIA GATE — CENTER ══ -->
+    <g transform="translate(660,130)">
+      <rect x="-90" y="375" width="180" height="13" fill="url(#wallG)" rx="1"/>
+      <rect x="-80" y="363" width="160" height="14" fill="url(#wallG)" rx="1"/>
+      <rect x="-70" y="352" width="140" height="12" fill="#200a0a" rx="1"/>
+      <rect x="-55" y="178" width="38" height="175" fill="url(#wallG)"/>
+      <rect x="-55" y="178" width="38" height="175" fill="url(#bricks)" opacity=".55"/>
+      <rect x="17" y="178" width="38" height="175" fill="url(#wallG)"/>
+      <rect x="17" y="178" width="38" height="175" fill="url(#bricks)" opacity=".55"/>
+      <path d="M-17 352 L-17 258 Q0 188 17 258 L17 352 Z" fill="#0a0000"/>
+      <rect x="-70" y="158" width="140" height="22" fill="#2a1010" rx="1"/>
+      <rect x="-60" y="143" width="120" height="17" fill="#3a1414" rx="1"/>
+      <line x1="-58" y1="153" x2="58" y2="153" stroke="rgba(204,26,14,0.35)" stroke-width=".7"/>
+      <rect x="-65" y="130" width="130" height="15" fill="#2a1010" rx="1"/>
+      <rect x="-55" y="116" width="110" height="16" fill="#3a1414" rx="1"/>
+      <rect x="-40" y="103" width="80" height="14" fill="#2a1010" rx="1"/>
+      <rect x="-25" y="90" width="50" height="14" fill="#3a1414" rx="1"/>
+      <polygon points="0,60 -15,90 15,90" fill="#3a1414"/>
+      <path d="M0 332 Q-4 322 0 315 Q4 322 0 332" fill="rgba(204,80,26,0.75)"/>
+      <path d="M0 327 Q-2 320 0 315 Q2 320 0 327" fill="rgba(255,180,60,0.6)"/>
+      <ellipse cx="0" cy="340" rx="7" ry="3" fill="rgba(204,26,14,0.18)"/>
+      <path d="M-55 352 L-55 258 Q-55 172 0 172 Q55 172 55 258 L55 352" fill="none" stroke="rgba(204,26,14,0.42)" stroke-width="1" filter="url(#gR)"/>
+      <line x1="-190" y1="290" x2="190" y2="290" stroke="rgba(204,26,14,0.28)" stroke-width=".6"/>
+    </g>
+
+    <!-- ══ RED FORT — LEFT ══ -->
+    <g transform="translate(200,0)">
+      <rect x="-160" y="510" width="320" height="90" fill="#0f0404"/>
+      <rect x="-160" y="330" width="320" height="182" fill="url(#wallG)"/>
+      <rect x="-160" y="330" width="320" height="182" fill="url(#bricks)" opacity=".65"/>
+      <g fill="#2a1010">
+        <rect x="-160" y="318" width="20" height="13" rx="1"/><rect x="-130" y="318" width="20" height="13" rx="1"/>
+        <rect x="-100" y="318" width="20" height="13" rx="1"/><rect x="-70" y="318" width="20" height="13" rx="1"/>
+        <rect x="-40" y="318" width="20" height="13" rx="1"/><rect x="-10" y="318" width="20" height="13" rx="1"/>
+        <rect x="20" y="318" width="20" height="13" rx="1"/><rect x="50" y="318" width="20" height="13" rx="1"/>
+        <rect x="80" y="318" width="20" height="13" rx="1"/><rect x="110" y="318" width="20" height="13" rx="1"/>
+      </g>
+      <rect x="-36" y="378" width="72" height="134" fill="#0a0000"/>
+      <path d="M-36 510 L-36 418 Q0 362 36 418 L36 510" fill="none" stroke="rgba(204,26,14,0.38)" stroke-width=".9"/>
+      <rect x="-165" y="238" width="55" height="94" fill="url(#wallG)"/>
+      <rect x="-165" y="238" width="55" height="94" fill="url(#bricks)" opacity=".5"/>
+      <rect x="-170" y="218" width="65" height="22" fill="#2a1010" rx="1"/>
+      <ellipse cx="-137" cy="208" rx="28" ry="11" fill="#180808"/>
+      <ellipse cx="-137" cy="196" rx="22" ry="9" fill="url(#domeG)"/>
+      <line x1="-137" y1="153" x2="-137" y2="170" stroke="rgba(204,26,14,0.65)" stroke-width="1.2"/>
+      <polygon points="-137,143 -120,150 -137,157" fill="rgba(204,26,14,0.65)"/>
+      <rect x="110" y="238" width="55" height="94" fill="url(#wallG)"/>
+      <rect x="110" y="238" width="55" height="94" fill="url(#bricks)" opacity=".5"/>
+      <rect x="105" y="218" width="65" height="22" fill="#2a1010" rx="1"/>
+      <ellipse cx="137" cy="208" rx="28" ry="11" fill="#180808"/>
+      <ellipse cx="137" cy="196" rx="22" ry="9" fill="url(#domeG)"/>
+      <line x1="137" y1="153" x2="137" y2="170" stroke="rgba(204,26,14,0.65)" stroke-width="1.2"/>
+      <polygon points="137,143 154,150 137,157" fill="rgba(204,26,14,0.65)"/>
+      <g fill="#0a0000">
+        <rect x="-100" y="368" width="9" height="20" rx="1"/><rect x="-72" y="368" width="9" height="20" rx="1"/>
+        <rect x="63" y="368" width="9" height="20" rx="1"/><rect x="91" y="368" width="9" height="20" rx="1"/>
+      </g>
+      <rect x="-160" y="330" width="320" height="182" fill="none" stroke="rgba(204,26,14,0.28)" stroke-width=".8"/>
+      <ellipse cx="0" cy="510" rx="80" ry="5" fill="rgba(204,26,14,0.07)"/>
+    </g>
+
+    <!-- ══ QUTUB MINAR — FAR LEFT ══ -->
+    <g transform="translate(82,0)">
+      <rect x="-35" y="490" width="70" height="22" fill="#180808" rx="1"/>
+      <rect x="-28" y="478" width="56" height="14" fill="#180808" rx="1"/>
+      <polygon points="-25,478 25,478 18,280 -18,280" fill="url(#wallG)"/>
+      <polygon points="-25,478 25,478 18,280 -18,280" fill="url(#bricks)" opacity=".7"/>
+      <rect x="-22" y="408" width="44" height="7" fill="#2a1010" rx="1"/>
+      <rect x="-19" y="401" width="38" height="9" fill="#180808" rx="1"/>
+      <rect x="-20" y="355" width="40" height="7" fill="#2a1010" rx="1"/>
+      <rect x="-17" y="348" width="34" height="9" fill="#180808" rx="1"/>
+      <rect x="-18" y="312" width="36" height="6" fill="#2a1010" rx="1"/>
+      <rect x="-15" y="306" width="30" height="8" fill="#180808" rx="1"/>
+      <polygon points="-15,306 15,306 10,230 -10,230" fill="url(#wallG)"/>
+      <polygon points="-15,306 15,306 10,230 -10,230" fill="url(#bricks)" opacity=".6"/>
+      <rect x="-14" y="268" width="28" height="5" fill="#2a1010" rx="1"/>
+      <polygon points="-10,230 10,230 7,190 -7,190" fill="#2a1010"/>
+      <ellipse cx="0" cy="185" rx="9" ry="6" fill="#2a1010"/>
+      <ellipse cx="0" cy="178" rx="6" ry="4" fill="#3a1414"/>
+      <line x1="0" y1="175" x2="0" y2="155" stroke="rgba(204,26,14,0.75)" stroke-width="1.4"/>
+      <circle cx="0" cy="152" r="3" fill="rgba(204,26,14,0.7)" filter="url(#gR)"/>
+      <polygon points="-25,478 25,478 10,190 -10,190" fill="none" stroke="rgba(204,26,14,0.3)" stroke-width=".7"/>
+    </g>
+
+    <!-- ══ HUMAYUN'S TOMB — RIGHT ══ -->
+    <g transform="translate(1150,40)">
+      <rect x="-140" y="490" width="280" height="22" fill="#0f0404" rx="1"/>
+      <rect x="-130" y="473" width="260" height="19" fill="#140606" rx="1"/>
+      <rect x="-120" y="456" width="240" height="19" fill="#100404" rx="1"/>
+      <rect x="-110" y="360" width="220" height="98" fill="url(#wallG)"/>
+      <rect x="-110" y="360" width="220" height="98" fill="url(#bricks)" opacity=".5"/>
+      <rect x="-105" y="338" width="30" height="24" fill="#180808" rx="1"/>
+      <rect x="75" y="338" width="30" height="24" fill="#180808" rx="1"/>
+      <ellipse cx="-90" cy="335" rx="16" ry="8" fill="#140808"/>
+      <path d="M-90 308 Q-78 328 -90 336 Q-102 328 -90 308" fill="#221010"/>
+      <ellipse cx="-90" cy="306" rx="5" ry="3" fill="#3a1414"/>
+      <line x1="-90" y1="303" x2="-90" y2="294" stroke="rgba(204,26,14,0.55)" stroke-width="1"/>
+      <ellipse cx="90" cy="335" rx="16" ry="8" fill="#140808"/>
+      <path d="M90 308 Q102 328 90 336 Q78 328 90 308" fill="#221010"/>
+      <ellipse cx="90" cy="306" rx="5" ry="3" fill="#3a1414"/>
+      <line x1="90" y1="303" x2="90" y2="294" stroke="rgba(204,26,14,0.55)" stroke-width="1"/>
+      <rect x="-50" y="338" width="100" height="120" fill="#0f0404"/>
+      <path d="M-50 458 L-50 378 Q0 318 50 378 L50 458 Z" fill="#0a0000"/>
+      <path d="M-50 378 Q0 318 50 378" fill="none" stroke="rgba(204,26,14,0.4)" stroke-width="1"/>
+      <path d="M-30 393 Q0 355 30 393" fill="none" stroke="rgba(204,26,14,0.25)" stroke-width=".7"/>
+      <rect x="-55" y="305" width="110" height="37" fill="#180808" rx="1"/>
+      <rect x="-45" y="295" width="90" height="12" fill="#221010" rx="1"/>
+      <path d="M-40 295 Q-40 240 0 220 Q40 240 40 295 Z" fill="url(#domeG)"/>
+      <ellipse cx="0" cy="295" rx="40" ry="6" fill="#180808"/>
+      <rect x="-35" y="287" width="70" height="10" fill="#221010" rx="1"/>
+      <line x1="0" y1="220" x2="0" y2="195" stroke="rgba(204,26,14,0.75)" stroke-width="1.4"/>
+      <circle cx="0" cy="192" r="4" fill="rgba(204,26,14,0.7)" filter="url(#gR)"/>
+      <path d="M-50 295 Q-50 272 -35 262 Q-20 272 -20 295 Z" fill="#150606"/>
+      <path d="M20 295 Q20 272 35 262 Q50 272 50 295 Z" fill="#150606"/>
+      <path d="M-40 295 Q-40 240 0 220 Q40 240 40 295" fill="none" stroke="rgba(204,26,14,0.45)" stroke-width="1" filter="url(#gR)"/>
+      <rect x="-108" y="390" width="34" height="68" fill="#0a0000"/>
+      <path d="M-108 420 Q-91 400 -74 420" fill="none" stroke="rgba(204,26,14,0.28)" stroke-width=".7"/>
+      <rect x="74" y="390" width="34" height="68" fill="#0a0000"/>
+      <path d="M74 420 Q91 400 108 420" fill="none" stroke="rgba(204,26,14,0.28)" stroke-width=".7"/>
+      <ellipse cx="0" cy="506" rx="100" ry="5" fill="rgba(204,26,14,0.07)"/>
+    </g>
+
+    <!-- ══ JAMA MASJID — LEFT-CENTER ══ -->
+    <g transform="translate(455,110)">
+      <rect x="-90" y="478" width="180" height="22" fill="#0f0404" rx="1"/>
+      <rect x="-80" y="460" width="160" height="20" fill="#140606" rx="1"/>
+      <rect x="-80" y="342" width="160" height="120" fill="url(#wallG)"/>
+      <rect x="-80" y="342" width="160" height="120" fill="url(#bricks)" opacity=".5"/>
+      <rect x="-65" y="387" width="35" height="75" fill="#0a0000"/>
+      <path d="M-65 412 Q-47 387 -30 412" fill="none" stroke="rgba(204,26,14,0.38)" stroke-width=".8"/>
+      <rect x="-18" y="377" width="36" height="85" fill="#0a0000"/>
+      <path d="M-18 400 Q0 372 18 400" fill="none" stroke="rgba(204,26,14,0.45)" stroke-width=".9"/>
+      <rect x="30" y="387" width="35" height="75" fill="#0a0000"/>
+      <path d="M30 412 Q47 387 65 412" fill="none" stroke="rgba(204,26,14,0.38)" stroke-width=".8"/>
+      <rect x="-22" y="317" width="44" height="28" fill="#180808" rx="1"/>
+      <path d="M-18 317 Q0 274 18 317 Z" fill="url(#domeG)"/>
+      <ellipse cx="0" cy="317" rx="18" ry="4" fill="#140808"/>
+      <line x1="0" y1="274" x2="0" y2="257" stroke="rgba(204,26,14,0.7)" stroke-width="1.2"/>
+      <circle cx="0" cy="254" r="3" fill="rgba(204,26,14,0.65)" filter="url(#gR)"/>
+      <rect x="-70" y="324" width="32" height="20" fill="#180808" rx="1"/>
+      <path d="M-66 324 Q-54 297 -42 324 Z" fill="#150606"/>
+      <ellipse cx="-54" cy="324" rx="12" ry="3" fill="#150606"/>
+      <line x1="-54" y1="297" x2="-54" y2="284" stroke="rgba(204,26,14,0.55)" stroke-width="1"/>
+      <rect x="38" y="324" width="32" height="20" fill="#180808" rx="1"/>
+      <path d="M42 324 Q54 297 66 324 Z" fill="#150606"/>
+      <ellipse cx="54" cy="324" rx="12" ry="3" fill="#150606"/>
+      <line x1="54" y1="297" x2="54" y2="284" stroke="rgba(204,26,14,0.55)" stroke-width="1"/>
+      <rect x="-95" y="312" width="16" height="168" fill="#180808" rx="1"/>
+      <rect x="-97" y="352" width="20" height="6" fill="#2a1010" rx="1"/>
+      <rect x="-97" y="392" width="20" height="6" fill="#2a1010" rx="1"/>
+      <rect x="-97" y="432" width="20" height="6" fill="#2a1010" rx="1"/>
+      <ellipse cx="-87" cy="309" rx="10" ry="5" fill="#180808"/>
+      <path d="M-87 287 Q-80 304 -87 310 Q-94 304 -87 287" fill="#2a1010"/>
+      <line x1="-87" y1="286" x2="-87" y2="272" stroke="rgba(204,26,14,0.7)" stroke-width="1"/>
+      <polygon points="-87,267 -82,272 -87,277 -92,272" fill="rgba(204,26,14,0.65)"/>
+      <rect x="79" y="312" width="16" height="168" fill="#180808" rx="1"/>
+      <rect x="77" y="352" width="20" height="6" fill="#2a1010" rx="1"/>
+      <rect x="77" y="392" width="20" height="6" fill="#2a1010" rx="1"/>
+      <rect x="77" y="432" width="20" height="6" fill="#2a1010" rx="1"/>
+      <ellipse cx="87" cy="309" rx="10" ry="5" fill="#180808"/>
+      <path d="M87 287 Q94 304 87 310 Q80 304 87 287" fill="#2a1010"/>
+      <line x1="87" y1="286" x2="87" y2="272" stroke="rgba(204,26,14,0.7)" stroke-width="1"/>
+      <polygon points="87,267 92,272 87,277 82,272" fill="rgba(204,26,14,0.65)"/>
+      <path d="M-18 317 Q0 274 18 317" fill="none" stroke="rgba(204,26,14,0.4)" stroke-width=".9" filter="url(#gR)"/>
+    </g>
+
+    <!-- ══ LOTUS TEMPLE — RIGHT-CENTER ══ -->
+    <g transform="translate(968,210)">
+      <ellipse cx="0" cy="398" rx="85" ry="9" fill="rgba(15,4,4,0.8)"/>
+      <rect x="-75" y="388" width="150" height="12" fill="#150606" rx="2"/>
+      <g fill="#1e0808" stroke="rgba(204,26,14,0.28)" stroke-width=".7">
+        <path d="M0 215 Q-43 260 -58 338 Q-28 358 0 363 Q28 358 58 338 Q43 260 0 215"/>
+        <path d="M0 388 L-58 338 Q-48 310 0 295 Q48 310 58 338 Z"/>
+      </g>
+      <g opacity=".82">
+        <path d="M-10 292 Q-53 312 -70 360 Q-44 374 -10 370 Z" fill="#1e0808" stroke="rgba(204,26,14,0.28)" stroke-width=".6"/>
+        <path d="M-20 287 Q-70 296 -83 343 Q-63 364 -24 360 Z" fill="#180606" stroke="rgba(204,26,14,0.22)" stroke-width=".6"/>
+        <path d="M10 292 Q53 312 70 360 Q44 374 10 370 Z" fill="#1e0808" stroke="rgba(204,26,14,0.28)" stroke-width=".6"/>
+        <path d="M20 287 Q70 296 83 343 Q63 364 24 360 Z" fill="#180606" stroke="rgba(204,26,14,0.22)" stroke-width=".6"/>
+      </g>
+      <g fill="#130606" stroke="rgba(204,26,14,0.18)" stroke-width=".5">
+        <path d="M0 252 Q-24 285 -28 338 Q0 350 28 338 Q24 285 0 252"/>
+      </g>
+      <ellipse cx="0" cy="290" rx="22" ry="29" fill="#130606"/>
+      <ellipse cx="0" cy="258" rx="16" ry="11" fill="#180808"/>
+      <path d="M0 215 Q-43 260 -58 338 Q0 363 58 338 Q43 260 0 215" fill="none" stroke="rgba(204,26,14,0.38)" stroke-width="1" filter="url(#gR)"/>
+    </g>
+
+    <!-- GROUND -->
+    <rect x="0" y="510" width="1440" height="110" fill="#080202"/>
+    <line x1="0" y1="510" x2="1440" y2="510" stroke="rgba(204,26,14,0.42)" stroke-width=".8" filter="url(#gR)"/>
+    <!-- Ground grid -->
+    <g stroke="rgba(204,26,14,0.07)" stroke-width=".5">
+      <line x1="720" y1="512" x2="0" y2="620"/><line x1="720" y1="512" x2="200" y2="620"/>
+      <line x1="720" y1="512" x2="400" y2="620"/><line x1="720" y1="512" x2="600" y2="620"/>
+      <line x1="720" y1="512" x2="840" y2="620"/><line x1="720" y1="512" x2="1040" y2="620"/>
+      <line x1="720" y1="512" x2="1240" y2="620"/><line x1="720" y1="512" x2="1440" y2="620"/>
+      <line x1="0" y1="535" x2="1440" y2="535"/><line x1="0" y1="560" x2="1440" y2="560"/>
+      <line x1="0" y1="585" x2="1440" y2="585"/>
+    </g>
+
+    <!-- AMBIENT GLOWS — restrained -->
+    <ellipse cx="200" cy="512" rx="110" ry="7" fill="rgba(204,26,14,0.06)"/>
+    <ellipse cx="660" cy="512" rx="95" ry="7" fill="rgba(204,26,14,0.09)" filter="url(#gR)"/>
+    <ellipse cx="968" cy="512" rx="75" ry="5" fill="rgba(204,26,14,0.05)"/>
+    <ellipse cx="1150" cy="512" rx="110" ry="7" fill="rgba(204,26,14,0.07)"/>
+
+    <!-- ═══════════════════════════════════════ -->
+    <!-- DEVCATION DEER — HERO RIGHT SIDE        -->
+    <!-- Large, detailed, glowing red stag       -->
+    <!-- ═══════════════════════════════════════ -->
+    <g transform="translate(1050,60)" filter="url(#deerFilter)">
+      <!-- HALO / AURA -->
+      <ellipse cx="0" cy="320" rx="120" ry="200" fill="url(#deerHalo)"/>
+
+      <!-- ANTLERS — left side (mirrored) -->
+      <g stroke="#cc1a0e" stroke-linecap="round" stroke-linejoin="round" fill="none">
+        <!-- Main beam left -->
+        <path d="M-28 168 C-38 148 -50 128 -58 108 C-62 96 -60 82 -52 72" stroke-width="5"/>
+        <!-- Brow tine left -->
+        <path d="M-46 132 C-56 122 -66 108 -68 94" stroke-width="3.5"/>
+        <!-- Bez tine left -->
+        <path d="M-55 108 C-68 98 -78 86 -74 72" stroke-width="3"/>
+        <!-- Crown tines left -->
+        <path d="M-52 72 C-58 58 -60 44 -55 32" stroke-width="2.8"/>
+        <path d="M-52 72 C-44 58 -40 44 -42 30" stroke-width="2.5"/>
+        <path d="M-52 72 C-60 62 -68 52 -66 38" stroke-width="2.2"/>
+        <!-- Beam tip glow dots -->
+        <circle cx="-55" cy="30" r="4" fill="rgba(204,26,14,0.5)" stroke="none"/>
+        <circle cx="-42" cy="28" r="3" fill="rgba(204,26,14,0.4)" stroke="none"/>
+        <circle cx="-67" cy="36" r="3" fill="rgba(204,26,14,0.35)" stroke="none"/>
+        <circle cx="-68" cy="92" r="2.5" fill="rgba(204,26,14,0.4)" stroke="none"/>
+        <circle cx="-74" cy="70" r="2.5" fill="rgba(204,26,14,0.35)" stroke="none"/>
+      </g>
+
+      <!-- ANTLERS — right side -->
+      <g stroke="#cc1a0e" stroke-linecap="round" stroke-linejoin="round" fill="none">
+        <path d="M28 168 C38 148 50 128 58 108 C62 96 60 82 52 72" stroke-width="5"/>
+        <path d="M46 132 C56 122 66 108 68 94" stroke-width="3.5"/>
+        <path d="M55 108 C68 98 78 86 74 72" stroke-width="3"/>
+        <path d="M52 72 C58 58 60 44 55 32" stroke-width="2.8"/>
+        <path d="M52 72 C44 58 40 44 42 30" stroke-width="2.5"/>
+        <path d="M52 72 C60 62 68 52 66 38" stroke-width="2.2"/>
+        <circle cx="55" cy="30" r="4" fill="rgba(204,26,14,0.5)" stroke="none"/>
+        <circle cx="42" cy="28" r="3" fill="rgba(204,26,14,0.4)" stroke="none"/>
+        <circle cx="67" cy="36" r="3" fill="rgba(204,26,14,0.35)" stroke="none"/>
+        <circle cx="68" cy="92" r="2.5" fill="rgba(204,26,14,0.4)" stroke="none"/>
+        <circle cx="74" cy="70" r="2.5" fill="rgba(204,26,14,0.35)" stroke="none"/>
+      </g>
+
+      <!-- NECK -->
+      <path d="M-22 188 C-26 210 -24 230 -20 245 L20 245 C24 230 26 210 22 188 Z" fill="#1e0808"/>
+      <path d="M-22 188 C-26 210 -24 230 -20 245 L20 245 C24 230 26 210 22 188" fill="none" stroke="rgba(204,26,14,0.35)" stroke-width=".8"/>
+
+      <!-- HEAD -->
+      <ellipse cx="0" cy="200" rx="30" ry="28" fill="#220a0a"/>
+      <!-- Muzzle -->
+      <ellipse cx="2" cy="216" rx="16" ry="12" fill="#1a0606"/>
+      <!-- Nose -->
+      <ellipse cx="2" cy="222" rx="9" ry="6" fill="#2e0808"/>
+      <ellipse cx="2" cy="222" rx="6" ry="4" fill="#0a0000"/>
+      <circle cx="4" cy="221" r="1.5" fill="rgba(255,255,255,0.2)"/>
+      <!-- Eyes -->
+      <ellipse cx="-16" cy="196" rx="8" ry="7" fill="#150505"/>
+      <circle cx="-16" cy="196" r="5" fill="#0a0000"/>
+      <circle cx="-14" cy="194" r="1.8" fill="rgba(255,255,255,0.25)"/>
+      <ellipse cx="16" cy="196" rx="8" ry="7" fill="#150505"/>
+      <circle cx="16" cy="196" r="5" fill="#0a0000"/>
+      <circle cx="18" cy="194" r="1.8" fill="rgba(255,255,255,0.25)"/>
+      <!-- Eye glow ring -->
+      <circle cx="-16" cy="196" r="7" fill="none" stroke="rgba(204,26,14,0.4)" stroke-width=".7"/>
+      <circle cx="16" cy="196" r="7" fill="none" stroke="rgba(204,26,14,0.4)" stroke-width=".7"/>
+      <!-- Ears -->
+      <path d="M-30 185 C-42 168 -44 152 -36 148 C-30 145 -22 158 -18 172 Z" fill="#1e0808"/>
+      <path d="M-30 185 C-38 170 -38 156 -32 152" fill="none" stroke="rgba(204,26,14,0.3)" stroke-width=".7"/>
+      <path d="M30 185 C42 168 44 152 36 148 C30 145 22 158 18 172 Z" fill="#1e0808"/>
+      <path d="M30 185 C38 170 38 156 32 152" fill="none" stroke="rgba(204,26,14,0.3)" stroke-width=".7"/>
+      <!-- Forehead mark / diamond -->
+      <path d="M0 178 L-5 185 L0 192 L5 185 Z" fill="rgba(204,26,14,0.25)"/>
+
+      <!-- BODY -->
+      <path d="M-20 245 C-35 260 -55 280 -65 305 C-70 320 -68 340 -60 355 L60 355 C68 340 70 320 65 305 C55 280 35 260 20 245 Z" fill="#1a0606"/>
+      <!-- Body outline -->
+      <path d="M-20 245 C-35 260 -55 280 -65 305 C-70 320 -68 340 -60 355 L60 355 C68 340 70 320 65 305 C55 280 35 260 20 245 Z" fill="none" stroke="rgba(204,26,14,0.28)" stroke-width=".8"/>
+      <!-- Chest highlight -->
+      <path d="M-8 252 C-5 270 0 285 0 300 C0 285 5 270 8 252 Z" fill="rgba(204,26,14,0.08)"/>
+      <!-- Shoulder muscles -->
+      <ellipse cx="-50" cy="295" rx="20" ry="25" fill="rgba(204,26,14,0.06)"/>
+      <ellipse cx="50" cy="295" rx="20" ry="25" fill="rgba(204,26,14,0.06)"/>
+
+      <!-- LEGS — front pair -->
+      <path d="M-30 352 C-32 370 -34 395 -32 420 L-24 420 C-24 395 -24 370 -22 352 Z" fill="#180606"/>
+      <path d="M22 352 C24 370 24 395 24 420 L32 420 C34 395 32 370 30 352 Z" fill="#180606"/>
+      <!-- Hooves front -->
+      <ellipse cx="-28" cy="422" rx="8" ry="5" fill="#0f0303"/>
+      <ellipse cx="28" cy="422" rx="8" ry="5" fill="#0f0303"/>
+
+      <!-- LEGS — back pair -->
+      <path d="M-50 352 C-55 370 -58 392 -54 418 L-46 418 C-44 394 -44 372 -42 352 Z" fill="#180606"/>
+      <path d="M50 352 C44 372 44 394 46 418 L54 418 C58 392 55 370 50 352 Z" fill="#180606"/>
+      <!-- Hooves back -->
+      <ellipse cx="-50" cy="420" rx="8" ry="5" fill="#0f0303"/>
+      <ellipse cx="50" cy="420" rx="8" ry="5" fill="#0f0303"/>
+
+      <!-- TAIL -->
+      <path d="M-10 352 C-16 360 -18 372 -12 380 C-6 372 -2 360 0 352 Z" fill="#2a0c0c"/>
+
+      <!-- CIRCUIT TRACE OVERLAY on body -->
+      <path d="M-40 270 L-55 285 M-55 285 L-60 300 M-55 285 L-48 298" stroke="rgba(204,26,14,0.18)" stroke-width=".7" fill="none"/>
+      <path d="M40 270 L55 285 M55 285 L60 300 M55 285 L48 298" stroke="rgba(204,26,14,0.18)" stroke-width=".7" fill="none"/>
+      <circle cx="-55" cy="285" r="1.5" fill="rgba(204,26,14,0.25)"/>
+      <circle cx="55" cy="285" r="1.5" fill="rgba(204,26,14,0.25)"/>
+
+      <!-- GLOW OUTLINE — the full deer silhouette glow -->
+      <path d="M-20 245 C-35 260 -55 280 -65 305 C-70 320 -68 340 -60 355 L60 355 C68 340 70 320 65 305 C55 280 35 260 20 245 Z" fill="none" stroke="rgba(204,26,14,0.22)" stroke-width="1.5" filter="url(#gR)"/>
+      <ellipse cx="0" cy="200" rx="30" ry="28" fill="none" stroke="rgba(204,26,14,0.18)" stroke-width="1" filter="url(#gR)"/>
+
+      <!-- SHADOW / GROUND REFLECTION -->
+      <ellipse cx="0" cy="510" rx="80" ry="6" fill="rgba(204,26,14,0.1)" filter="url(#gR)"/>
+    </g>
+
+    <!-- FOG at bottom -->
+    <rect x="0" y="468" width="1440" height="150" fill="url(#skyG)" opacity=".55"/>
+  </svg>
+
+  <!-- HERO TEXT -->
+  <div class="hero-content">
+    <div class="hero-eyebrow">Google Developer Groups · IGDTUW × IIT Delhi</div>
+    <h1 class="hero-title">
+      <span class="l1">DEVCATION</span>
+      <span class="l2">DELHI 2026</span>
+      <span class="l3">Where Speed, Skill, and Code Converge</span>
+    </h1>
+    <p class="hero-tagline">India's most immersive student hackathon. 36 hours of hacking, mentorship, and pure innovation at the Grand Finale — IIT Delhi.</p>
+    <div class="hero-meta">
+      <div class="hero-meta-item">📍 <strong>IIT Delhi, India</strong></div>
+      <div class="hero-meta-item">📅 <strong>Grand Finale: April 12, 2026</strong></div>
+      <div class="hero-meta-item">👥 <strong>1–4 Members</strong></div>
+      <div class="hero-meta-item">💰 <strong>₹3,00,000+ Prize Pool</strong></div>
+    </div>
+    <div class="hero-actions">
+      <a href="https://unstop.com" target="_blank" class="btn btn-primary">🔥 Register Now — Free</a>
+      <a href="#tracks" class="btn btn-outline">Explore Tracks ↓</a>
+    </div>
+  </div>
+
+  <div class="hero-scroll"><span>scroll</span><div class="sb"></div></div>
+  <div class="hero-fog"></div>
+
+  <div class="ticker">
+    <div class="ticker-inner">
+      <span>PRIZE POOL: ₹3,00,000+</span><span class="tsep"> ✦ </span>
+      <span>TIGERGRAPH PREMIUM TRACK</span><span class="tsep"> ✦ </span>
+      <span>HACK 'N' SOLVE OPEN INNOVATION</span><span class="tsep"> ✦ </span>
+      <span>SUSTAINABILITY TRACK</span><span class="tsep"> ✦ </span>
+      <span>DUALITY TRACK</span><span class="tsep"> ✦ </span>
+      <span>SUBMIT BY APRIL 4TH</span><span class="tsep"> ✦ </span>
+      <span>GRAND FINALE: IIT DELHI</span><span class="tsep"> ✦ </span>
+      <span>PRIZE POOL: ₹3,00,000+</span><span class="tsep"> ✦ </span>
+      <span>TIGERGRAPH PREMIUM TRACK</span><span class="tsep"> ✦ </span>
+      <span>HACK 'N' SOLVE OPEN INNOVATION</span><span class="tsep"> ✦ </span>
+      <span>SUSTAINABILITY TRACK</span><span class="tsep"> ✦ </span>
+      <span>DUALITY TRACK</span><span class="tsep"> ✦ </span>
+      <span>SUBMIT BY APRIL 4TH</span><span class="tsep"> ✦ </span>
+      <span>GRAND FINALE: IIT DELHI</span><span class="tsep"> ✦ </span>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="s-eye">Mission Briefing</div>
+  <div class="s-title reveal">About Devcation Delhi 2026</div>
+  <div class="s-divider"></div>
+  <div class="about-grid reveal">
+    <div>
+      <div class="about-stats">
+        <div class="about-stat"><div class="stat-num">3L+</div><div class="stat-lbl">Prize Pool</div></div>
+        <div class="about-stat"><div class="stat-num">36H</div><div class="stat-lbl">Hacking Time</div></div>
+        <div class="about-stat"><div class="stat-num">4</div><div class="stat-lbl">Unique Tracks</div></div>
+        <div class="about-stat"><div class="stat-num">IIT</div><div class="stat-lbl">Delhi Venue</div></div>
+      </div>
+      <div class="org-badges" style="margin-top:1.5rem">
+        <div class="org-badge"><span class="org-dot" style="background:#60a5fa"></span>GDG IGDTUW</div>
+        <div class="org-badge"><span class="org-dot" style="background:#34d399"></span>GDG IIT Delhi</div>
+        <div class="org-badge"><span class="org-dot" style="background:#f59e0b"></span>Powered by TigerGraph</div>
+        <div class="org-badge"><span class="org-dot" style="background:#f472b6"></span>Rotaract Club IGDTUW</div>
+      </div>
+    </div>
+    <div class="about-text">
+      <p><strong>Devcation Delhi 2026</strong> is the flagship hackathon organized by <strong>Google Developer Groups IGDTUW</strong> in collaboration with <strong>GDG IIT Delhi</strong>.</p>
+      <p>Through talks, workshops, mentorship sessions, and intense hacking, participants will build impactful solutions and showcase them at the <strong>Grand Finale at IIT Delhi</strong>.</p>
+      <p>Brace yourselves for a wild ride through innovation — where <strong>agile minds collide</strong>, crazy projects come to life, and big ideas chase even bigger rewards.</p>
+      <p>Guided by mentors and industry experts, participants will experience an exciting journey of <strong>innovation, learning, collaboration, and competition</strong>.</p>
+      <div style="margin-top:1.5rem"><a href="https://chat.whatsapp.com/GSnoBtuBmpODdbRCf8MYxk?mode=hq1tcli" target="_blank" class="btn btn-outline" style="font-size:.82rem;display:inline-block;">Join WhatsApp Community →</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- TRACKS -->
+<section id="tracks">
+  <div class="s-eye">Mission Objectives</div>
+  <div class="s-title reveal">Choose Your Track</div>
+  <div class="s-divider"></div>
+  <p class="s-sub reveal">Four distinct challenges. One grand stage. Build something that matters.</p>
+  <div class="tracks-grid reveal">
+    <div class="track-card"><div class="track-badge">⚡ PREMIUM</div><div class="track-num">TRACK_01</div><div class="track-icon">🐯</div><div class="track-title">TigerGraph Track</div><div class="track-sub">Open Innovation · Exclusive Prizes</div><p class="track-desc">Build solutions using <strong>TigerGraph MCP</strong>. Exclusive cash prizes for the most innovative graph-powered applications.</p><div class="track-tags"><span class="ttag">Graph DB</span><span class="ttag">MCP</span><span class="ttag">Analytics</span><span class="ttag">AI</span></div></div>
+    <div class="track-card"><div class="track-num">TRACK_02</div><div class="track-icon">⚡</div><div class="track-title">Hack 'N' Solve</div><div class="track-sub">Open Innovation · 3 Winners</div><p class="track-desc">Solve real-world challenges across multiple domains. Compete for the most open and versatile track of Devcation.</p><div class="track-tags"><span class="ttag">FinTech</span><span class="ttag">HealthTech</span><span class="ttag">AI/ML</span><span class="ttag">Web3</span></div></div>
+    <div class="track-card"><div class="track-num">TRACK_03</div><div class="track-icon">🌍</div><div class="track-title">Sustainability Track</div><div class="track-sub">Powered by Rotaract Club IGDTUW</div><p class="track-desc">Technology-driven solutions for environmental and social impact. Build the future that our planet deserves.</p><div class="track-tags"><span class="ttag">CleanTech</span><span class="ttag">Environment</span><span class="ttag">SDGs</span></div></div>
+    <div class="track-card"><div class="track-num">TRACK_04</div><div class="track-icon">🔀</div><div class="track-title">Duality Track</div><div class="track-sub">Interdisciplinary Innovation</div><p class="track-desc">Merge diverse fields — art + tech, biology + code, hardware + software. This track rewards the unconventional.</p><div class="track-tags"><span class="ttag">Interdisciplinary</span><span class="ttag">Hardware</span><span class="ttag">Creative Tech</span></div></div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section id="timeline">
+  <div class="s-eye">Mission Timeline</div>
+  <div class="s-title reveal" style="text-align:center">Event Flow</div>
+  <div class="s-divider" style="margin:0.7rem auto 0"></div>
+  <div class="tl-wrap reveal">
+    <div class="tl-line"></div>
+    <div class="tl-item tl-item-left"><div class="tl-card"><div class="tl-date">March 2026</div><div class="tl-event">Registration Opens</div><div class="tl-detail">Sign up free on Unstop. Solo or team of up to 4.</div></div><div class="tl-center"><div class="tl-dot"></div></div><div class="tl-empty"></div></div>
+    <div class="tl-item tl-item-right"><div class="tl-empty"></div><div class="tl-center"><div class="tl-dot"></div></div><div class="tl-card"><div class="tl-date">April 4, 2026</div><div class="tl-event">Submission Deadline</div><div class="tl-detail">Final date to submit project on Unstop + GitHub.</div></div></div>
+    <div class="tl-item tl-item-left"><div class="tl-card"><div class="tl-date">Early April 2026</div><div class="tl-event">Problem Statements Released</div><div class="tl-detail">Track-specific prompts, datasets, and TigerGraph API access shared.</div></div><div class="tl-center"><div class="tl-dot"></div></div><div class="tl-empty"></div></div>
+    <div class="tl-item tl-item-right"><div class="tl-empty"></div><div class="tl-center"><div class="tl-dot"></div></div><div class="tl-card"><div class="tl-date">April 12, 2026 — 10:00 AM</div><div class="tl-event">🔥 Grand Finale Kickoff — IIT Delhi</div><div class="tl-detail">Opening ceremony, keynotes, mentor intros. 36 hours begins.</div></div></div>
+    <div class="tl-item tl-item-left"><div class="tl-card"><div class="tl-date">April 12–13</div><div class="tl-event">Hacking + Mentorship Sessions</div><div class="tl-detail">Build, iterate, present progress. Industry mentors available throughout.</div></div><div class="tl-center"><div class="tl-dot"></div></div><div class="tl-empty"></div></div>
+    <div class="tl-item tl-item-right"><div class="tl-empty"></div><div class="tl-center"><div class="tl-dot special"></div></div><div class="tl-card"><div class="tl-date">April 13, 2026 — Evening</div><div class="tl-event">🏆 Judging, Results & Awards</div><div class="tl-detail">Finalist pitches, expert judging panel, winners announced live.</div></div></div>
+  </div>
+</section>
+
+<!-- PRIZES -->
+<section id="prizes">
+  <div class="s-eye">Rewards Awaiting</div>
+  <div class="s-title reveal">Prizes & Recognition</div>
+  <div class="s-divider"></div>
+  <p class="s-sub reveal">₹3,00,000+ in total prizes across all tracks. Plus internship opportunities, swag kits, and certificates.</p>
+  <div class="prizes-podium reveal">
+    <div class="prize-card"><span class="prize-medal">🥈</span><div class="prize-place">Second Place</div><div class="prize-amt">₹75,000</div><div class="prize-extras">Certificates + Goodies Pack<br>Exclusive Sponsor Swag</div></div>
+    <div class="prize-card first"><span class="prize-medal">🥇</span><div class="prize-place">Grand Winner</div><div class="prize-amt">₹1,50,000</div><div class="prize-extras">Internship Opportunities<br>Premium Swag Kit + Trophy<br>Certificates + LinkedIn Feature</div></div>
+    <div class="prize-card"><span class="prize-medal">🥉</span><div class="prize-place">Third Place</div><div class="prize-amt">₹50,000</div><div class="prize-extras">Certificates + Goodies Pack<br>Community Recognition</div></div>
+  </div>
+  <div class="perks-grid reveal">
+    <div class="perk"><span class="perk-icon">🏆</span>TigerGraph Track Exclusive Cash Prizes</div>
+    <div class="perk"><span class="perk-icon">💼</span>Internship & Job Opportunities</div>
+    <div class="perk"><span class="perk-icon">🎓</span>Certificates for All Participants</div>
+    <div class="perk"><span class="perk-icon">🎁</span>Swag Kits & Goodies</div>
+    <div class="perk"><span class="perk-icon">🗣️</span>Talks by Industry Experts</div>
+    <div class="perk"><span class="perk-icon">🤝</span>Mentorship from GDG Leaders</div>
+  </div>
+</section>
+
+<!-- SPONSORS -->
+<section id="sponsors">
+  <div class="s-eye">Mission Partners</div>
+  <div class="s-title reveal">Sponsors & Organizers</div>
+  <div class="s-divider"></div>
+  <div class="s-tier reveal"><div class="tier-lbl">Title Sponsor</div><div class="tier-row"><div class="s-card title-sp">⚡ TigerGraph</div></div></div>
+  <div class="s-tier reveal"><div class="tier-lbl">Organizing Bodies</div><div class="tier-row"><div class="s-card">Google Developer Groups IGDTUW</div><div class="s-card">GDG IIT Delhi</div><div class="s-card">Rotaract Club IGDTUW</div></div></div>
+  <div class="s-tier reveal"><div class="tier-lbl">Platform Partners</div><div class="tier-row"><div class="s-card">Unstop</div><div class="s-card">GitHub</div><div class="s-card">Google Cloud</div><div class="s-card">Devfolio</div></div></div>
+  <div class="reveal" style="margin-top:1.5rem;padding:1.2rem;border:1px dashed var(--b1);text-align:center;"><p style="font-family:'Share Tech Mono',monospace;font-size:.72rem;color:var(--dim);">// Interested in sponsoring? <a href="mailto:gdscigdtuw@gmail.com" style="color:var(--red3);text-decoration:none">Reach out →</a></p></div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="s-eye">Intel Briefing</div>
+  <div class="s-title reveal" style="text-align:center">Frequently Asked Questions</div>
+  <div class="s-divider" style="margin:.7rem auto 0"></div>
+  <div class="faq-list reveal">
+    <div class="faq-item"><button class="faq-q" onclick="toggleFAQ(this)">Who can participate? <span class="faq-ch">▾</span></button><div class="faq-ans"><div class="faq-ans-inner">Any student currently enrolled in a college or university. All years, all branches welcome — open to participants across India.</div></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFAQ(this)">What is the team size? <span class="faq-ch">▾</span></button><div class="faq-ans"><div class="faq-ans-inner">Teams of 1 to 4 members. Solo participation fully supported. Cross-college teams welcome!</div></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFAQ(this)">Is there a registration fee? <span class="faq-ch">▾</span></button><div class="faq-ans"><div class="faq-ans-inner">Devcation Delhi 2026 is completely FREE to participate. Register on Unstop — no hidden charges.</div></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFAQ(this)">Is it online or offline? <span class="faq-ch">▾</span></button><div class="faq-ans"><div class="faq-ans-inner">Initial rounds and submission phase are online. Finalists are invited to the Grand Finale at IIT Delhi — a fully offline, immersive experience.</div></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFAQ(this)">What is the TigerGraph Premium Track? <span class="faq-ch">▾</span></button><div class="faq-ans"><div class="faq-ans-inner">Build solutions using TigerGraph MCP. Exclusive cash prizes on top of the main pool. Check the problem statement doc for full details.</div></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFAQ(this)">What tech stack can I use? <span class="faq-ch">▾</span></button><div class="faq-ans"><div class="faq-ans-inner">Any language, framework, or platform — except TigerGraph track requires TigerGraph MCP integration. Projects must be built during the hackathon. No pre-existing code.</div></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFAQ(this)">When is the submission deadline? <span class="faq-ch">▾</span></button><div class="faq-ans"><div class="faq-ans-inner">Online submissions close <strong>April 4th, 2026</strong>. Grand Finale at IIT Delhi on <strong>April 12, 2026</strong>. Submit on both Unstop and GitHub.</div></div></div>
+  </div>
+</section>
+
+<!-- COMMUNITY -->
+<section id="community">
+  <div class="s-eye">Join the Crew</div>
+  <div class="s-title reveal">Community & Contact</div>
+  <div class="s-divider"></div>
+  <p class="s-sub reveal">All mission-critical channels below.</p>
+  <div class="community-grid reveal">
+    <a href="https://chat.whatsapp.com/GSnoBtuBmpODdbRCf8MYxk?mode=hq1tcli" target="_blank" class="community-card"><span class="cc-icon">💬</span><div class="cc-name">WhatsApp Group</div><div class="cc-handle">#NextStopDevcation</div></a>
+    <a href="https://unstop.com" target="_blank" class="community-card"><span class="cc-icon">🚀</span><div class="cc-name">Register on Unstop</div><div class="cc-handle">Official Platform</div></a>
+    <a href="https://linkedin.com" target="_blank" class="community-card"><span class="cc-icon">💼</span><div class="cc-name">LinkedIn</div><div class="cc-handle">@GDG IGDTUW</div></a>
+    <a href="https://instagram.com" target="_blank" class="community-card"><span class="cc-icon">📸</span><div class="cc-name">Instagram</div><div class="cc-handle">@gdscigdtuw</div></a>
+    <a href="mailto:gdscigdtuw@gmail.com" class="community-card"><span class="cc-icon">📧</span><div class="cc-name">Email Us</div><div class="cc-handle">gdscigdtuw@gmail.com</div></a>
+    <a href="https://docs.google.com/document/d/1eyelV8YsxLFSc8S3DH7i6uJFk5ks-DBRisx7e52CKJs/edit?usp=sharing" target="_blank" class="community-card"><span class="cc-icon">📄</span><div class="cc-name">TigerGraph Doc</div><div class="cc-handle">Problem Statement</div></a>
+  </div>
+</section>
+
+<footer>
+  <div>
+    <div class="footer-logo">DEVCATION DELHI 2026</div>
+    <div class="footer-tag">Where Speed, Skill, and Code Converge · #NextStopDevcation</div>
+  </div>
+  <p>Organised by GDG IGDTUW × GDG IIT Delhi</p>
+  <div class="footer-links">
+    <a href="#about">About</a><a href="#tracks">Tracks</a>
+    <a href="#prizes">Prizes</a><a href="mailto:gdscigdtuw@gmail.com">Contact</a>
+  </div>
+</footer>
+
+<!-- DEVBOT -->
+<button id="devbot-toggle" onclick="toggleBot()" title="Ask DevBot">🤖</button>
+<div id="devbot-panel">
+  <div class="db-hdr"><div class="db-av">🤖</div><div><div class="db-name">DEVBOT — AI Mission Guide</div><div class="db-status">Online 24/7</div></div></div>
+  <div class="db-msgs" id="db-msgs"><div class="db-msg"><div class="db-msg-av">🤖</div><div class="db-bub">Greetings, innovator. 👾 I'm DevBot — your guide to Devcation Delhi 2026. Ask me anything about tracks, prizes, registration, or the event!</div></div></div>
+  <div class="db-chips">
+    <button class="db-chip" onclick="quickAsk('What are the tracks?')">Tracks?</button>
+    <button class="db-chip" onclick="quickAsk('How to register?')">Register?</button>
+    <button class="db-chip" onclick="quickAsk('What are the prizes?')">Prizes?</button>
+    <button class="db-chip" onclick="quickAsk('When is the finale?')">Date?</button>
+    <button class="db-chip" onclick="quickAsk('Team size?')">Team?</button>
+  </div>
+  <div class="db-input-row">
+    <input class="db-in" id="db-input" placeholder="Ask anything..." onkeydown="if(event.key==='Enter')sendBot()">
+    <button class="db-snd" onclick="sendBot()">➤</button>
+  </div>
+</div>
+
+<script>
+// EMBER PARTICLES — red-only
+const cv=document.getElementById('bgcanvas'),cx=cv.getContext('2d');
+let pts=[];
+function rsz(){cv.width=window.innerWidth;cv.height=window.innerHeight;}
+function init(){
+  pts=[];
+  const n=Math.floor(window.innerWidth/9);
+  for(let i=0;i<n;i++){
+    const isRed=Math.random()>.3;
+    pts.push({
+      x:Math.random()*cv.width,y:cv.height+Math.random()*cv.height,
+      vx:(Math.random()-.5)*.35,vy:-(Math.random()*.55+.12),
+      r:Math.random()*1.3+.2,a:Math.random()*.35+.04,
+      c:isRed?[204,26,14]:[230,60,40]
+    });
+  }
+}
+function draw(){
+  cx.clearRect(0,0,cv.width,cv.height);
+  pts.forEach(p=>{
+    cx.beginPath();cx.arc(p.x,p.y,p.r,0,Math.PI*2);
+    cx.fillStyle=`rgba(${p.c[0]},${p.c[1]},${p.c[2]},${p.a})`;
+    cx.fill();
+    p.x+=p.vx;p.y+=p.vy;
+    if(p.y<-10){p.y=cv.height+10;p.x=Math.random()*cv.width;}
+  });
+  requestAnimationFrame(draw);
+}
+rsz();init();draw();
+window.addEventListener('resize',()=>{rsz();init();});
+
+// CURSOR
+const cur=document.getElementById('cursor'),ring=document.getElementById('cursor-ring');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px';});
+(function ar(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(ar);})();
+document.querySelectorAll('a,button,.track-card,.community-card').forEach(el=>{
+  el.addEventListener('mouseenter',()=>ring.classList.add('big'));
+  el.addEventListener('mouseleave',()=>ring.classList.remove('big'));
+});
+
+// NAV
+window.addEventListener('scroll',()=>{document.getElementById('main-nav').classList.toggle('scrolled',window.scrollY>50);});
+function toggleMenu(){document.getElementById('mobile-nav').classList.toggle('open');}
+function closeMobileMenu(){document.getElementById('mobile-nav').classList.remove('open');}
+
+// REVEAL
+const io=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');io.unobserve(x.target);}});},{threshold:.08});
+document.querySelectorAll('.reveal,.reveal-l,.reveal-r').forEach(el=>io.observe(el));
+
+// FAQ
+function toggleFAQ(b){
+  const item=b.parentElement,ans=b.nextElementSibling,inner=ans.querySelector('.faq-ans-inner'),open=item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(el=>{el.classList.remove('open');el.querySelector('.faq-ans').style.maxHeight=null;});
+  if(!open){item.classList.add('open');ans.style.maxHeight=inner.scrollHeight+'px';}
+}
+
+// DEVBOT
+const bO={v:false};
+const KB={
+  track:'4 tracks:\n🐯 TigerGraph (Premium) — Graph tech + exclusive prizes\n⚡ Hack N Solve — FinTech/HealthTech/AI/Web3\n🌍 Sustainability — Environmental & social impact\n🔀 Duality — Interdisciplinary innovation',
+  register:'Register FREE on Unstop! Search Devcation Delhi 2026. Solo or team of 2-4.',
+  prize:'Prize pool ₹3,00,000+!\n🥇 1st: ₹1,50,000 + Internship + Swag\n🥈 2nd: ₹75,000 + Goodies\n🥉 3rd: ₹50,000 + Goodies\nPlus TigerGraph exclusive prizes!',
+  date:'Submit by: April 4, 2026\nGrand Finale: April 12, 2026 at IIT Delhi',
+  team:'1–4 members. Solo fully supported. Cross-college OK!',
+  venue:'Grand Finale at IIT Delhi, India.',
+  tigergraph:'Build using TigerGraph MCP. Exclusive cash prizes separate from main pool.',
+  whatsapp:'https://chat.whatsapp.com/GSnoBtuBmpODdbRCf8MYxk?mode=hq1tcli — #NextStopDevcation',
+  fee:'100% FREE to participate!',
+  default:'Check our WhatsApp group or email gdscigdtuw@gmail.com!'
+};
+function bR(q){
+  const l=q.toLowerCase();
+  if(l.match(/track|hack|sustain|dual|tiger/))return KB.track;
+  if(l.match(/register|sign|join|unstop/))return KB.register;
+  if(l.match(/prize|win|money|reward/))return KB.prize;
+  if(l.match(/date|when|deadline|april|finale/))return KB.date;
+  if(l.match(/team|member|solo|size/))return KB.team;
+  if(l.match(/venue|where|iit|location/))return KB.venue;
+  if(l.match(/tigergraph|graph|mcp/))return KB.tigergraph;
+  if(l.match(/whatsapp|group/))return KB.whatsapp;
+  if(l.match(/fee|free|cost/))return KB.fee;
+  return KB.default;
+}
+function aM(t,u){
+  const m=document.getElementById('db-msgs'),d=document.createElement('div');
+  d.className='db-msg'+(u?' u':'');
+  d.innerHTML=`<div class="db-msg-av">${u?'👤':'🤖'}</div><div class="db-bub">${t.replace(/\n/g,'<br>')}</div>`;
+  m.appendChild(d);m.scrollTop=m.scrollHeight;
+}
+function sendBot(){const i=document.getElementById('db-input'),q=i.value.trim();if(!q)return;aM(q,true);i.value='';setTimeout(()=>aM(bR(q),false),500);}
+function quickAsk(q){aM(q,true);setTimeout(()=>aM(bR(q),false),500);}
+function toggleBot(){
+  const p=document.getElementById('devbot-panel');
+  bO.v=!bO.v;p.classList.toggle('open',bO.v);
+  document.getElementById('devbot-toggle').textContent=bO.v?'✕':'🤖';
+}
+
+// ACTIVE NAV
+const secs=document.querySelectorAll('section[id]'),nls=document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll',()=>{
+  let c='';secs.forEach(s=>{if(window.scrollY>=s.offsetTop-120)c=s.id;});
+  nls.forEach(a=>{a.style.color=a.getAttribute('href')==='#'+c?'var(--red3)':'';});
+});
+</script>
+</body>
+</html>
